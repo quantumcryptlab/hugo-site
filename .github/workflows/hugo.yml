@@ -24,7 +24,7 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./public
-        external_repository: https://github.com/quantumcryptlab/quantumcryptlab.github.io  
+        external_repository: quantumcryptlab/quantumcryptlab.github.io  
         publish_branch: main  
         keep_files: true  
 
