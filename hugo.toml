@@ -2,3 +2,9 @@ baseURL = 'https://www.quantumcryptlab.org/'
 languageCode = 'en-us'
 title = 'Quantum Crypt Lab'
 theme = "book"
+
+[params]
+  BookSection = "*"   # 让所有 section 出现在左侧菜单
+
+[markup.goldmark.renderer]
+  unsafe = true       # 允许 Markdown 里写 HTML（可选）
