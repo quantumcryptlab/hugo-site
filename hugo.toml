@@ -1,4 +1,4 @@
 baseURL = 'https://www.quantumcryptlab.org/'
 languageCode = 'en-us'
 title = 'Quantum Crypt Lab'
-theme = "ananke"
+theme = "book"
