@@ -4,6 +4,12 @@
   <url>
     <loc>http://localhost:1313/ai/ai-security/</loc>
   </url><url>
+    <loc>http://localhost:1313/cryptography/</loc>
+  </url><url>
+    <loc>http://localhost:1313/mathematics/group-theory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/mathematics/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
@@ -12,11 +18,11 @@
   </url><url>
     <loc>http://localhost:1313/ai/ai-security/homomorphic-encryption/</loc>
   </url><url>
-    <loc>http://localhost:1313/cryptography/</loc>
-  </url><url>
     <loc>http://localhost:1313/quantum-computing/</loc>
   </url><url>
     <loc>http://localhost:1313/research/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cryptography/zero-knowledge-proof/</loc>
   </url><url>
     <loc>http://localhost:1313/ai/</loc>
   </url><url>
