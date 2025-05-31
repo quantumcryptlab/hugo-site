@@ -26,5 +26,4 @@ jobs:
         publish_dir: ./public
         external_repository: quantumcryptlab/quantumcryptlab.github.io  
         publish_branch: main  
-        keep_files: true  
 
