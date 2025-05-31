@@ -6,9 +6,19 @@
   </url><url>
     <loc>http://localhost:1313/cryptography/</loc>
   </url><url>
+    <loc>http://localhost:1313/quantum-physics/entangled/</loc>
+  </url><url>
     <loc>http://localhost:1313/mathematics/group-theory/</loc>
   </url><url>
     <loc>http://localhost:1313/mathematics/</loc>
+  </url><url>
+    <loc>http://localhost:1313/quantum-physics/photon-polarization/</loc>
+  </url><url>
+    <loc>http://localhost:1313/quantum-physics/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cryptography/zero-knowledge-proof/schnorrs-identification-protocol/</loc>
+  </url><url>
+    <loc>http://localhost:1313/quantum-physics/superposed/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>

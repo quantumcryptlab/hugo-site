@@ -8,6 +8,27 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Entangled</title>
+      <link>http://localhost:1313/quantum-physics/entangled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/quantum-physics/entangled/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photon Polarization</title>
+      <link>http://localhost:1313/quantum-physics/photon-polarization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/quantum-physics/photon-polarization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Superposed</title>
+      <link>http://localhost:1313/quantum-physics/superposed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/quantum-physics/superposed/</guid>
+      <description>&lt;h1 id=&#34;quantum-superposition&#34;&gt;&#xA;  Quantum Superposition&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#quantum-superposition&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Quantum superposition is one of the fundamental principles of quantum mechanics. It states that a quantum system can exist in multiple states simultaneously until it is measured.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mathematical-description&#34;&gt;&#xA;  Mathematical Description&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#mathematical-description&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In quantum mechanics, we can describe a quantum state |ψ⟩ as a superposition of basis states. For example, a qubit can be written as:&lt;/p&gt;&#xA;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/katex/katex.min.css&#34; /&gt;&#xA;&lt;script defer src=&#34;http://localhost:1313/katex/katex.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script defer src=&#34;http://localhost:1313/katex/auto-render.min.js&#34; onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;&lt;span&gt;&#xA;  \[&#xA;|\psi\rangle = \alpha|0\rangle + \beta|1\rangle&#xA;\]&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;where α and β are complex numbers satisfying:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>test</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
