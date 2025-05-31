@@ -10,11 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
         hugo-version: 'latest'
         extended: true
+
+    - name: Clean public directory
+      run: rm -rf public
 
     - name: Build
       run: hugo --minify
@@ -24,6 +31,8 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./public
-        external_repository: quantumcryptlab/quantumcryptlab.github.io  
-        publish_branch: main  
+        external_repository: quantumcryptlab/quantumcryptlab.github.io
+        publish_branch: main
+        force_orphan: true  # This will create a single commit with the latest changes
+        full_commit_message: ${{ github.event.head_commit.message }}
 
