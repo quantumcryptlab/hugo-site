@@ -1,5 +1,5 @@
 ---
-title: "Superposed"
+title: "Quantum Superposition"
 weight: 10
 ---
 
