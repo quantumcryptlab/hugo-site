@@ -4,6 +4,11 @@ description: "By Xudong ZHAO"
 weight: 10
 ---
 
+# Quantum Crypt Lab
+*By Xudong ZHAO*  
+📧 [xudong.zhao@protonmail.com](mailto:xudong.zhao@protonmail.com)  
+💼 [LinkedIn Profile](https://www.linkedin.com/in/xudongzhao/)
+
 Welcome to Quantum Crypt Lab! This is your gateway to understanding the fascinating world of quantum computing, cryptography, and their intersections.
 
 ## Our Main Topics
