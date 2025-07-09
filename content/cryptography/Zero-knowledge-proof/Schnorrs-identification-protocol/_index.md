@@ -18,68 +18,68 @@ The Schnorr protocol is based on the discrete logarithm problem in a cyclic grou
 ## Mathematical Setup
 
 ### Parameters
-- **Group**: A cyclic group \(G\) of prime order \(q\)
-- **Generator**: \(g\) is a generator of \(G\)
-- **Secret**: \(x \in \mathbb{Z}_q\) (the prover's private key)
-- **Public Key**: \(y = g^x\) (the prover's public key)
+- **Group**: A cyclic group {{< katex >}}G{{< /katex >}} of prime order {{< katex >}}q{{< /katex >}}
+- **Generator**: {{< katex >}}g{{< /katex >}} is a generator of {{< katex >}}G{{< /katex >}}
+- **Secret**: {{< katex >}}x \in \mathbb{Z}_q{{< /katex >}} (the prover's private key)
+- **Public Key**: {{< katex >}}y = g^x{{< /katex >}} (the prover's public key)
 
 ### The Protocol
 
 **Step 1: Commitment**
-- Prover chooses a random \(r \in \mathbb{Z}_q\)
-- Prover computes \(R = g^r\)
-- Prover sends \(R\) to the verifier
+- Prover chooses a random {{< katex >}}r \in \mathbb{Z}_q{{< /katex >}}
+- Prover computes {{< katex >}}R = g^r{{< /katex >}}
+- Prover sends {{< katex >}}R{{< /katex >}} to the verifier
 
 **Step 2: Challenge**
-- Verifier chooses a random \(c \in \mathbb{Z}_q\)
-- Verifier sends \(c\) to the prover
+- Verifier chooses a random {{< katex >}}c \in \mathbb{Z}_q{{< /katex >}}
+- Verifier sends {{< katex >}}c{{< /katex >}} to the prover
 
 **Step 3: Response**
-- Prover computes \(s = r + c \cdot x \pmod{q}\)
-- Prover sends \(s\) to the verifier
+- Prover computes {{< katex >}}s = r + c \cdot x \pmod{q}{{< /katex >}}
+- Prover sends {{< katex >}}s{{< /katex >}} to the verifier
 
 **Verification**
-- Verifier checks: \(g^s = R \cdot y^c\)
+- Verifier checks: {{< katex >}}g^s = R \cdot y^c{{< /katex >}}
 
 ## Why It Works
 
 The verification equation holds because:
-\[
+{{< katex display=true >}}
 g^s = g^{r + c \cdot x} = g^r \cdot g^{c \cdot x} = R \cdot (g^x)^c = R \cdot y^c
-\]
+{{< /katex >}}
 
 ## Security Properties
 
 ### 1. Completeness
-If the prover knows \(x\), they can always compute the correct response \(s\) that satisfies the verification equation.
+If the prover knows {{< katex >}}x{{< /katex >}}, they can always compute the correct response {{< katex >}}s{{< /katex >}} that satisfies the verification equation.
 
 ### 2. Soundness
-If the prover doesn't know \(x\), they cannot respond correctly to a random challenge. The probability of success is \(1/q\), which is negligible for large \(q\).
+If the prover doesn't know {{< katex >}}x{{< /katex >}}, they cannot respond correctly to a random challenge. The probability of success is {{< katex >}}1/q{{< /katex >}}, which is negligible for large {{< katex >}}q{{< /katex >}}.
 
 ### 3. Zero-Knowledge
-The verifier learns nothing about \(x\) beyond the fact that the prover knows it. The transcript \((R, c, s)\) can be simulated without knowing \(x\).
+The verifier learns nothing about {{< katex >}}x{{< /katex >}} beyond the fact that the prover knows it. The transcript {{< katex >}}(R, c, s){{< /katex >}} can be simulated without knowing {{< katex >}}x{{< /katex >}}.
 
 ## Concrete Example
 
-Let's work through a small example with \(q = 23\) and \(g = 5\):
+Let's work through a small example with {{< katex >}}q = 23{{< /katex >}} and {{< katex >}}g = 5{{< /katex >}}:
 
 **Setup:**
-- Prover's secret: \(x = 7\)
-- Public key: \(y = 5^7 = 17 \pmod{23}\)
+- Prover's secret: {{< katex >}}x = 7{{< /katex >}}
+- Public key: {{< katex >}}y = 5^7 = 17 \pmod{23}{{< /katex >}}
 
 **Protocol Execution:**
-1. Prover chooses \(r = 12\)
-2. Prover computes \(R = 5^{12} = 18 \pmod{23}\)
-3. Prover sends \(R = 18\) to verifier
-4. Verifier chooses \(c = 3\)
-5. Verifier sends \(c = 3\) to prover
-6. Prover computes \(s = 12 + 3 \cdot 7 = 33 \equiv 10 \pmod{23}\)
-7. Prover sends \(s = 10\) to verifier
+1. Prover chooses {{< katex >}}r = 12{{< /katex >}}
+2. Prover computes {{< katex >}}R = 5^{12} = 18 \pmod{23}{{< /katex >}}
+3. Prover sends {{< katex >}}R = 18{{< /katex >}} to verifier
+4. Verifier chooses {{< katex >}}c = 3{{< /katex >}}
+5. Verifier sends {{< katex >}}c = 3{{< /katex >}} to prover
+6. Prover computes {{< katex >}}s = 12 + 3 \cdot 7 = 33 \equiv 10 \pmod{23}{{< /katex >}}
+7. Prover sends {{< katex >}}s = 10{{< /katex >}} to verifier
 
 **Verification:**
-- Verifier checks: \(5^{10} = 18 \cdot 17^3 \pmod{23}\)
-- Left side: \(5^{10} = 9 \pmod{23}\)
-- Right side: \(18 \cdot 17^3 = 18 \cdot 10 = 180 \equiv 9 \pmod{23}\)
+- Verifier checks: {{< katex >}}5^{10} = 18 \cdot 17^3 \pmod{23}{{< /katex >}}
+- Left side: {{< katex >}}5^{10} = 9 \pmod{23}{{< /katex >}}
+- Right side: {{< katex >}}18 \cdot 17^3 = 18 \cdot 10 = 180 \equiv 9 \pmod{23}{{< /katex >}}
 - Verification succeeds!
 
 ## Interactive vs Non-Interactive
@@ -91,7 +91,7 @@ Let's work through a small example with \(q = 23\) and \(g = 5\):
 
 ### Non-Interactive Version (Fiat-Shamir Transform)
 - Uses a hash function to generate the challenge
-- Challenge: \(c = H(R || \text{message})\)
+- Challenge: {{< katex >}}c = H(R || \text{message}){{< /katex >}}
 - Allows for offline proof generation
 - Used in digital signatures
 
@@ -134,7 +134,7 @@ Let's work through a small example with \(q = 23\) and \(g = 5\):
 
 ### Random Number Generation
 - Use cryptographically secure random number generators
-- Never reuse the same \(r\) value
+- Never reuse the same {{< katex >}}r{{< /katex >}} value
 - Protect against timing attacks
 
 ### Performance Optimization
